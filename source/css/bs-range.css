@@ -1,0 +1,44 @@
+.spin-btn-Up {
+    height: 18px !important;
+    top: -8px !important;
+    vertical-align: -webkit-baseline-middle !important;
+    position: inherit !important;
+    width: 35px;
+    text-align: justify;
+    border-top-right-radius: 5px !important;
+}
+
+    .spin-btn-Up:hover {
+        background-color: #FFE082;
+        box-shadow: 1px -2px 12px -2px #9E9E9E
+    }
+
+.spin-btn-Down:hover {
+    background-color: #FFE082;
+    box-shadow: 1px -2px 12px -2px #9E9E9E
+}
+
+.spin-btn-Down {
+    height: 18px !important;
+    top: 8px !important;
+    vertical-align: -webkit-baseline-middle !important;
+    position: inherit !important;
+    width: 35px !important;
+    text-align: justify !important;
+    border-bottom-right-radius: 5px !important;
+    left: -33px;
+}
+
+.glyphicon-menu-up:before {
+    content: "\e260";
+    top: 0px;
+    position: absolute;
+    font-size: smaller;
+}
+
+.glyphicon-menu-down:before {
+    content: "\e259";
+    top: 0px;
+    position: absolute;
+    font-size: smaller;
+}

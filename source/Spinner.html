@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Bootstrap Spinner</title>
+
+    <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.eot" />
+    <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.svg" />
+    <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.ttf" />
+    <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.woff" />
+    <link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bs-range.css" />
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="js/bs-input-range.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#txtrange').spinner({ InitValue: 200, minValue: 150, maxValue: 350, allowDecimal: true, decimalPrecision: 3, step: 2.2 });
+    });
+
+    function ChangeValue() {
+        $('#txtrange').spinner(300);
+    }
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1>Bootstrap`s Spinner <small>A new era of Components.</small></h1>
+        </div>
+        <div class="jumbotron">
+            <h1>Bootstrap Spinner</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" placeholder="Enter Number" aria-describedby="basic-addon1" id="txtrange">
+                </div>
+                <div class="col-lg-1">
+                    <a class="btn btn-primary btn-sm" onclick="ChangeValue()" role="button">Change Value</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
