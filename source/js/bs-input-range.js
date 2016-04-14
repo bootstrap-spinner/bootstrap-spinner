@@ -9,7 +9,6 @@
         this.buildLabel();
         this.bindChangeEvent();
     }
-
     spinner.prototype = {
 
         defaults: {
@@ -274,13 +273,11 @@
     function Increment(selector, settings) {
         if (settings.allowDecimal == true) {
             var newval = parseFloat($(selector).val());
-            var steps = (settings.step).toString();
-            steps = (settings.step);
-            
-            //var newStepsVal = padZero(settings.decimalPrecision);
-            //steps = parseFloat(steps.insert(steps.indexOf('.') + 1, newStepsVal));
+          
+            var steps = parseFloat(settings.step.toFixed(settings.decimalPrecision));
+            newval = parseFloat(newval.toFixed(settings.decimalPrecision));
 
-            if (parseFloat(newval + steps).toFixed(settings.decimalPrecision) <= parseFloat(settings.maxValue).toFixed(settings.decimalPrecision)) {
+            if (parseFloat(newval + steps) <= parseFloat(settings.maxValue.toFixed(settings.decimalPrecision))) {
                 $(selector).val(parseFloat(newval + steps).toFixed(settings.decimalPrecision));
             }
         } else {
@@ -294,11 +291,11 @@
         if (settings.allowDecimal == true) {
             var newval = parseFloat($(selector).val());
             var steps = (settings.step).toString();
-            steps = (settings.step);
-            //var newStepsVal = padZero(settings.decimalPrecision);
-            //steps = parseFloat(steps.insert(steps.indexOf('.') + 1, newStepsVal));
+            steps = parseFloat(settings.step.toFixed(settings.decimalPrecision));
+           
+            newval = parseFloat(newval.toFixed(settings.decimalPrecision));
 
-            if (parseFloat(newval - steps).toFixed(settings.decimalPrecision) >= parseFloat(settings.minValue).toFixed(settings.decimalPrecision)) {
+            if ((newval - steps) >= parseFloat(settings.minValue.toFixed(settings.decimalPrecision))) {
                 $(selector).val(parseFloat(newval - steps).toFixed(settings.decimalPrecision));
             }
         } else {
